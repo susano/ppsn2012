@@ -1,0 +1,15 @@
+
+Source code for the experiments in the PPSN 2012 Krohn and Gorse paper :
+Extracting Key Gene Regulatory Dynamics for the Direct Control of Mechanical
+System.
+
+Requirement:
+ - install jruby (rvm is recommended)
+ - install gems: metaheuristics, mirah, threadify
+
+
+modify ppsn/ppsn.rb according to the exeperiment to run, run with:
+
+ ./jruby ppsn/ppsn.rb
+
+

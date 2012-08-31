@@ -1,0 +1,4 @@
+#!/bin/sh
+
+jruby --server --fast --1.9 -J-Djruby.objectspace.enabled=false -J-Djruby.thread.pooling=true --fast -J-XX:-UseLoopPredicate -Xinvokedynamic.constants=true -X+C -J-XX:ReservedCodeCacheSize=512M -J-XX:+UseCodeCacheFlushing -J-Xmn512m -J-Xms2048m -J-Xmx2048m -J-server -I.:ode_integration:metaheuristics:dynamics:fgrn -J-Djruby.compile.mode=FORCE $*
+

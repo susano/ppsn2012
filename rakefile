@@ -1,0 +1,16 @@
+MIRAH_FILES = [
+	'fgrn/ProteinConcentration.mirah',
+	'fgrn/VectorProtein.mirah',
+	'fgrn/MondrianPortion.mirah',
+	'fgrn/MondrianProteinFactory.mirah',
+	'fgrn/LandscapeProteinFactory.mirah'
+]
+
+MIRAH_FILES.each do |f|
+	file f.sub(/mirah$/, 'class') => MIRAH_FILES do
+		sh "mirahc --classpath . #{f}"
+	end
+end
+
+task :default => MIRAH_FILES.collect{ |f| f.sub(/mirah$/, 'class') }
+
